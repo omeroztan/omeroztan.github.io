@@ -49,9 +49,9 @@
       <section class="work-section" id="work">
         <div class="wrap">
           <div class="section-heading">
-            <p class="eyebrow">01 — PROJECTS</p>
-            <h2>A document assistant<br />with more than one source.</h2>
-            <p>A hands-on project for learning how an assistant can use company documents and structured business data together.</p>
+            <p class="eyebrow">01 — SELECTED PROJECTS</p>
+            <h2>Useful systems,<br />made inspectable.</h2>
+            <p>Two hands-on projects exploring practical AI workflows, with clear evidence of what each system does.</p>
           </div>
 
           <article class="project-card">
@@ -85,6 +85,38 @@
             <div><span class="detail-number">02</span><h4>Evidence is visible</h4><p>Answers include citations or a record of the tool used, so a person can inspect how the assistant reached its response.</p></div>
             <div><span class="detail-number">03</span><h4>Quality is measured</h4><p>Retrieval strategies can be compared against labeled questions. Application tests run in CI before deployment; MLflow records evaluation runs.</p></div>
           </div>
+
+          <article class="project-card routewise-card" id="routewise">
+            <div class="project-main">
+              <div class="project-kicker"><span>PROJECT 02</span><span>CLASSIFICATION / AGENT TOOLS</span></div>
+              <h3>Routewise<br />Support Triage</h3>
+              <p class="project-intro">A customer message is matched to a likely issue, sent to one of six fictional support teams, and turned into a useful next step. Requests the router cannot confidently place are held for human review.</p>
+              <div class="project-tags"><span>Text classification</span><span>Human review</span><span>Tool use</span><span>FastAPI</span></div>
+              <div class="project-links">
+                <a class="button button-coral" href="https://routewise-demo.oztanomer.com" target="_blank" rel="noreferrer">Try the live demo <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="#routewise-details">How it works <span aria-hidden="true">↓</span></a>
+              </div>
+              <p class="fiction-note"><span>DEMO</span> Uses <a href="https://github.com/PolyAI-LDN/task-specific-datasets/tree/master/banking_data" target="_blank" rel="noreferrer">BANKING77 by PolyAI</a> (CC BY 4.0). Teams, accounts, and card actions are fictional; no real banking systems are connected.</p>
+            </div>
+            <div class="project-side routewise-side">
+              <div class="route-diagram">
+                <div class="route-diagram-head"><span>ROUTING EXAMPLE</span><span>01 / 03</span></div>
+                <div class="route-message"><span>CUSTOMER MESSAGE</span><p>“My card doesn’t work when I try to pay.”</p></div>
+                <div class="route-down" aria-hidden="true">↓</div>
+                <div class="route-prediction"><span>LIKELY ISSUE</span><strong>Card payment problem</strong></div>
+                <div class="route-down" aria-hidden="true">↓</div>
+                <div class="route-specialist"><span>SEND TO THIS TEAM</span><strong>Cards &amp; Wallets</strong><p>Found a help article and prepared guidance.</p></div>
+                <div class="route-simulation"><span>OPTIONAL DEMO</span> Lost-card requests can try a confirmed simulated freeze.</div>
+              </div>
+              <div class="metric-card routewise-metric"><div><span class="metric-label">OVERALL HELD-OUT TEST SET</span><strong>Correct specialist</strong></div><div class="metric-value">96.4<span>%</span></div><p>Separately, a review threshold set to target 98% accuracy on validation data routed 93.4% of test requests.</p></div>
+            </div>
+          </article>
+
+          <div class="project-details routewise-details" id="routewise-details">
+            <div><span class="detail-number">01</span><h4>Choose a team—or review</h4><p>A supervised classifier maps messages to 77 support topics, then to six specialist teams. A review threshold avoids forcing a team choice on uncertain requests.</p></div>
+            <div><span class="detail-number">02</span><h4>Show the specialist’s work</h4><p>The selected team searches source-linked help guidance and prepares a next step. Visitors can inspect the activity trace and compare a simple tool-matching baseline.</p></div>
+            <div><span class="detail-number">03</span><h4>Make actions safe to explore</h4><p>For a lost-card request, visitors can confirm a simulated freeze. It changes only temporary demo state, with a visible result and audit entry.</p></div>
+          </div>
         </div>
       </section>
 
@@ -101,7 +133,7 @@
       </section>
 
       <section class="stack-section">
-        <div class="wrap stack-row"><div><p class="eyebrow">TOOLS IN THIS PROJECT</p><p class="stack-caption">Technologies used in the featured project.</p></div><div class="stack-list"><span>Python</span><span>FastAPI</span><span>React</span><span>PostgreSQL</span><span>Chroma</span><span>MLflow</span><span>Docker</span><span>GitHub Actions</span></div></div>
+        <div class="wrap stack-row"><div><p class="eyebrow">TOOLS ACROSS PROJECTS</p><p class="stack-caption">Selected technologies used in this portfolio.</p></div><div class="stack-list"><span>Python</span><span>FastAPI</span><span>scikit-learn</span><span>React</span><span>PostgreSQL</span><span>Chroma</span><span>MLflow</span><span>Docker</span><span>GitHub Actions</span></div></div>
       </section>
 
       <footer class="site-footer wrap">
