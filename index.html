@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f4f2ec" />
-    <meta name="description" content="Projects by Omer Oztan across software, data, and applied AI." />
+    <meta name="description" content="Three projects by Omer Oztan: a document assistant, support-routing demo, and German electricity market data platform." />
     <title>Omer Oztan — Projects</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -58,6 +58,18 @@
               </div>
             </div>
           </article>
+          <article class="project-index-item strommarkt-index">
+            <span class="project-index-number">03</span>
+            <div class="project-index-copy">
+              <span class="project-index-type">DATA ENGINEERING / ENERGY</span>
+              <h2>German Electricity Market Data</h2>
+              <p>Explore hourly prices, demand, and selected generation data from SMARD.</p>
+              <div class="project-index-links">
+                <a href="#strommarkt">Explore project <span aria-hidden="true">↓</span></a>
+                <a href="https://strommarkt.oztanomer.com" target="_blank" rel="noreferrer">Open live dashboard <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
         </nav>
         <div class="hero-index"><span>PORTFOLIO / 2026</span><span>INDEPENDENT PROJECTS & EXPERIMENTS</span></div>
       </section>
@@ -67,7 +79,7 @@
           <div class="section-heading">
             <p class="eyebrow">01 — SELECTED PROJECTS</p>
             <h2>Useful systems,<br />made inspectable.</h2>
-            <p>Two hands-on projects exploring practical AI workflows, with clear evidence of what each system does.</p>
+            <p>Three independent projects across document intelligence, support triage, and electricity-market data. Each makes its workflow and evidence inspectable.</p>
           </div>
 
           <article class="project-card knowledge-card" id="company-knowledge">
@@ -133,6 +145,30 @@
             <div><span class="detail-number">02</span><h4>Show the specialist’s work</h4><p>The selected team searches source-linked help guidance and prepares a next step. Visitors can inspect the activity trace and compare a simple tool-matching baseline.</p></div>
             <div><span class="detail-number">03</span><h4>Make actions safe to explore</h4><p>For a lost-card request, visitors can confirm a simulated freeze. It changes only temporary demo state, with a visible result and audit entry.</p></div>
           </div>
+
+          <article class="project-card energy-card" id="strommarkt">
+            <div class="project-main">
+              <div class="project-kicker"><span>PROJECT 03</span><span>DATA ENGINEERING / ENERGY</span></div>
+              <h3>German Electricity<br />Market Data</h3>
+              <p class="project-intro">An end-to-end pipeline and dashboard for German electricity-market data from SMARD. It ingests hourly prices, demand, and selected generation series, transforms them into analytical tables, and serves them through an API.</p>
+              <div class="project-tags"><span>SMARD</span><span>Python</span><span>dbt + DuckDB</span><span>FastAPI</span><span>React</span></div>
+              <div class="project-links">
+                <a class="button button-coral" href="https://strommarkt.oztanomer.com" target="_blank" rel="noreferrer">Open live dashboard <span aria-hidden="true">↗</span></a>
+              </div>
+              <p class="fiction-note"><span>DATA</span> Hourly and daily views · source repository is private.</p>
+            </div>
+            <div class="project-side energy-side">
+              <div class="energy-diagram">
+                <div class="route-diagram-head"><span>DATA FLOW</span><span>01 / 03</span></div>
+                <div class="energy-steps">
+                  <span>SMARD source blocks</span>
+                  <span>Bronze → Silver → Gold</span>
+                  <span>FastAPI → dashboard</span>
+                </div>
+                <p>Parquet storage · dbt models · DuckDB analytics</p>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -149,7 +185,7 @@
       </section>
 
       <section class="stack-section">
-        <div class="wrap stack-row"><div><p class="eyebrow">TOOLS ACROSS PROJECTS</p><p class="stack-caption">Selected technologies used in this portfolio.</p></div><div class="stack-list"><span>Python</span><span>FastAPI</span><span>scikit-learn</span><span>React</span><span>PostgreSQL</span><span>Chroma</span><span>MLflow</span><span>Docker</span><span>GitHub Actions</span></div></div>
+        <div class="wrap stack-row"><div><p class="eyebrow">TOOLS ACROSS PROJECTS</p><p class="stack-caption">Selected technologies used in this portfolio.</p></div><div class="stack-list"><span>Python</span><span>FastAPI</span><span>scikit-learn</span><span>React</span><span>dbt</span><span>DuckDB</span><span>Parquet</span><span>PostgreSQL</span><span>Chroma</span><span>MLflow</span><span>Docker</span><span>GitHub Actions</span></div></div>
       </section>
 
       <footer class="site-footer wrap">

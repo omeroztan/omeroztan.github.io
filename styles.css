@@ -62,6 +62,13 @@ a { color: inherit; text-decoration: none; }
 .section-heading > p:last-child { margin: 0 0 4px; color: #6a7771; font-size: 13px; line-height: 1.7; }
 .project-card { display: grid; grid-template-columns: 1.03fr .97fr; overflow: hidden; border: 1px solid #dfe4dd; border-radius: 12px; background: #f7f6f1; }
 .routewise-card { margin-top: 64px; }
+.energy-card { margin-top: 64px; }
+.energy-side { background: #edf0e8; }
+.energy-diagram { width: 100%; padding: 20px; border: 1px solid #dce4dc; border-radius: 9px; background: var(--white); box-shadow: 0 10px 28px #2443310a; }
+.energy-steps { display: grid; gap: 8px; margin-top: 16px; }
+.energy-steps span { padding: 11px 12px; border: 1px solid #dfe5dd; border-radius: 7px; background: #fbfcf8; color: #53675a; font: 10px var(--mono); }
+.energy-steps span + span { border-left: 3px solid #83a98d; }
+.energy-diagram > p { margin: 13px 0 0; color: #7b8981; font-size: 10px; }
 .project-main { padding: 33px 36px 27px; }
 .project-kicker { display: flex; justify-content: space-between; color: #85918a; font: 9px var(--mono); letter-spacing: .8px; }
 .project-main h3 { margin: 29px 0 15px; font: 700 37px/1.1 var(--display); letter-spacing: -2px; }
@@ -174,6 +181,7 @@ a { color: inherit; text-decoration: none; }
   .section-heading > p:last-child { font-size: 12px; }
   .project-card { grid-template-columns: 1fr; }
   .routewise-card { margin-top: 48px; }
+  .energy-card { margin-top: 48px; }
   .project-main { padding: 24px 20px 20px; }
   .project-main h3 { margin-top: 24px; font-size: 31px; }
   .project-side { padding: 18px; }
