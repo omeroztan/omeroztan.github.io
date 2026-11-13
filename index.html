@@ -63,7 +63,7 @@
             <div class="project-index-copy">
               <span class="project-index-type">DATA ENGINEERING / ENERGY</span>
               <h2>German Electricity Market Data</h2>
-              <p>Explore hourly prices, demand, and selected generation data from SMARD.</p>
+              <p>Explore hourly prices, grid load, generation, and historical load-forecast comparisons built from SMARD data.</p>
               <div class="project-index-links">
                 <a href="#strommarkt">Explore project <span aria-hidden="true">↓</span></a>
                 <a href="https://strommarkt.oztanomer.com" target="_blank" rel="noreferrer">Open live dashboard <span aria-hidden="true">↗</span></a>
@@ -150,12 +150,12 @@
             <div class="project-main">
               <div class="project-kicker"><span>PROJECT 03</span><span>DATA ENGINEERING / ENERGY</span></div>
               <h3>German Electricity<br />Market Data</h3>
-              <p class="project-intro">An end-to-end pipeline and dashboard for German electricity-market data from SMARD. It ingests hourly prices, demand, and selected generation series, transforms them into analytical tables, and serves them through an API.</p>
+              <p class="project-intro">An end-to-end data platform for German electricity-market data from SMARD. It incrementally ingests hourly day-ahead prices, grid load, and selected generation, transforms them through Bronze, Silver, and Gold layers, and serves the results through a FastAPI backend and React dashboard. A daily job also refreshes weather inputs and the Forecast Lab’s historical backtest.</p>
               <div class="project-tags"><span>SMARD</span><span>Python</span><span>dbt + DuckDB</span><span>FastAPI</span><span>React</span></div>
               <div class="project-links">
                 <a class="button button-coral" href="https://strommarkt.oztanomer.com" target="_blank" rel="noreferrer">Open live dashboard <span aria-hidden="true">↗</span></a>
               </div>
-              <p class="fiction-note"><span>DATA</span> Hourly and daily views · source repository is private.</p>
+              <p class="fiction-note"><span>DATA</span> Hourly and daily market views · historical load-forecast evaluation · source repository is private.</p>
             </div>
             <div class="project-side energy-side">
               <div class="energy-diagram">
@@ -169,6 +169,11 @@
               </div>
             </div>
           </article>
+          <div class="project-details energy-details">
+            <div><span class="detail-number">01</span><h4>Refresh from the source</h4><p>SMARD chart data lands as timestamped Bronze blocks. The scheduled pipeline incrementally fetches new or refreshed blocks and rebuilds the analytical outputs.</p></div>
+            <div><span class="detail-number">02</span><h4>Transform and validate</h4><p>Python standardizes the Silver datasets; dbt and DuckDB build the hourly fact table and run data checks; Python produces daily and negative-price marts.</p></div>
+            <div><span class="detail-number">03</span><h4>Evaluate load forecasts</h4><p>The Forecast Lab compares rolling historical predictions with actual grid load. The experiments are exploratory, not operational forecasts or trading signals.</p></div>
+          </div>
         </div>
       </section>
 
